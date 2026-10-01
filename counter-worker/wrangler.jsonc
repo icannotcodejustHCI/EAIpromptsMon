@@ -1,0 +1,12 @@
+{
+  "name": "eai-mongolia-visitor-counter",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "vars": {
+    "ALLOWED_ORIGINS": "https://icannotcodejusthci.github.io"
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "COUNTER", "class_name": "VisitCounter" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["VisitCounter"] }]
+}
